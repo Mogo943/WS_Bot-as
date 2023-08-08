@@ -1,8 +1,7 @@
 from selenium import webdriver
 
-
 url ="https://web.whatsapp.com/"
-path = "V2 selenium\Recursos\chromedriver-win64\chromedriver.exe"
+path = "Recursos\chromedriver-win64\chromedriver.exe"
 driver = webdriver.Chrome(path)
 executor_url = driver.command_executor._url
 session_id = driver.session_id
@@ -10,7 +9,7 @@ driver.get(url)
 driver.maximize_window()
 
 
-with open ("V2 selenium\Recursos\whatsapp_session.txt", "w") as text_file:
+with open ("Recursos\whatsapp_session.txt", "w") as text_file:
     text_file.write("{}\n".format(executor_url))
     text_file.write(session_id)
 
