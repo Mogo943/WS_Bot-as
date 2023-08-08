@@ -14,7 +14,7 @@ driver = RemoteWebDriver
 #intervalo de difusion modificable desde un txt
 intervalo = open('Recursos\intervalo_de_difusion.txt', mode = 'r', encoding = 'utf-8')
 intervalo = intervalo.read()
-intervalo = float(intervalo)
+intervalo = int(intervalo)
 
 # Conectarse a la sesion de keepSession.py
 def create_driver_session():
