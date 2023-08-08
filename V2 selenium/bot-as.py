@@ -8,13 +8,13 @@ from selenium.webdriver.common.keys import Keys
 
 
 # Ruta al controlador de Chrome
-filepath = 'V2 selenium\Recursos\whatsapp_session.txt'
+filepath = 'Recursos\whatsapp_session.txt'
 driver = RemoteWebDriver
 
 #intervalo de difusion modificable desde un txt
-intervalo = open('V2 selenium\Recursos\intervalo_de_difusion.txt', mode = 'r', encoding = 'utf-8')
+intervalo = open('Recursos\intervalo_de_difusion.txt', mode = 'r', encoding = 'utf-8')
 intervalo = intervalo.read()
-intervalo = int(intervalo)
+intervalo = float(intervalo)
 
 # Conectarse a la sesion de keepSession.py
 def create_driver_session():
@@ -59,7 +59,7 @@ def buscar_chats(nombre):
 #cierra el archivo para evitar fallos en la proxima ejecucion
 def enviar_mensaje():
     print('\n Enviando mensaje')
-    mensaje = open('V2 selenium\Recursos\mensaje.txt', mode = 'r', encoding = 'utf-8')
+    mensaje = open('Recursos\mensaje.txt', mode = 'r', encoding = 'utf-8')
     texto = mensaje.read()
     mensaje.close()
     pyperclip.copy(texto)
@@ -82,7 +82,7 @@ def abrir_chat(nombre):
 #cierra el archivo para evitar fallos en la proxima ejecucion
 def difundir():
     print('\n Difundiendo la palabra')
-    contacto = open('V2 selenium\Recursos\contactos.txt', mode = 'r', encoding='utf-8')
+    contacto = open('Recursos\contactos.txt', mode = 'r', encoding='utf-8')
     chats = contacto.readlines()
     for i in range(0, len(chats)):
         nombre = chats[i].strip()
@@ -97,12 +97,9 @@ def whatsapp_boot_init():
     driver = create_driver_session()
     instancias()
     difundir()
-
 whatsapp_boot_init()
-
 #funcion para establecer un intervalo de ejecucion de la funcion difundir
 schedule.every(intervalo).hours.do(difundir)
-
 #mientras el programa este abierto va a quedar en espera de la siguiente ejecucion de la funcion difundir
 while True:
     schedule.run_pending()
