@@ -1,17 +1,28 @@
-# WS-Bot-as
-Un bot de difusion de mensajes continuos con intervalo de horas modificable, contactos objetivo y mensaje a enviar (No abusar de cantidad de contactos e invertavlo, va contra T&amp;C de WhatsApp y se considera spam)
+# WhatsApp Web – Bot de Mensajería Programada
 
---IMPORTANTE--
+Bot desarrollado en Python para automatizar el envío periódico de mensajes a contactos específicos de WhatsApp Web. Utiliza Selenium y Web Scraping para simular la interacción con la plataforma.
 
-La version de Chromedriver usada es 115.0.5790.171 para windows 64 bits
-Si tu navegador no es chrome o tienes otra version, deberas buscar en https://chromedriver.chromium.org/ la version igual a la de tu navegador y compatible con tu SO
+## 🧠 ¿Qué hace?
 
--MODO DE USO-
+- Lee los siguientes parámetros desde un archivo `.txt`:
+  - Lista de contactos destinatarios
+  - Mensaje a enviar
+  - Intervalo de tiempo entre envíos
+- Envía automáticamente el mensaje configurado a cada contacto, respetando los tiempos indicados.
+- Funciona sobre la interfaz de WhatsApp Web usando Selenium.
 
-primero ejecutar keepSession.py e iniciar sesion en whatsappweb
-segundo ejecutar bot_as.py y dejarlo correr, trabaja en segundo plano, no interfiere con el uso del equipo
+## ⚙️ Tecnologías utilizadas
 
-Con la misma estructura de arhivo, asegurandote de que las rutas esten correctas esto puede varias entre equipos
-En el recurso intervalo.txt se setea en numeros enteros las horas entre mensaje y mensaje (para evitar spam recomiendo 3 horas)
-En el recurso contactos.txt se almacenan los grupos o contactos de destino, deben guardarse 1 por linea y tal cual los tienes agendados
-En el recurso mensaje.txt se alamacena el mensaje que quieres enviar, se copia y pega asi que escribelo tal cual quieres que se envie, con espacios, interlineados o emojis
+- Python
+- Selenium
+- Web Scraping
+- WhatsApp Web (interfaz simulada)
+
+## 💡 Aplicación
+
+Ideal para automatizar recordatorios, alertas, mensajes recurrentes o notificaciones internas a través de WhatsApp. Pensado como herramienta auxiliar para tareas repetitivas o comunicación estructurada.
+
+---
+
+**Autor:** Carlos Mogollón  
+[LinkedIn](https://www.linkedin.com/in/c%D0%B0rlosmogollon)
