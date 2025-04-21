@@ -25,4 +25,4 @@ Ideal para automatizar recordatorios, alertas, mensajes recurrentes o notificaci
 ---
 
 **Autor:** Carlos Mogollón  
-[LinkedIn](https://www.linkedin.com/in/cariosmogoiion/)
+[LinkedIn](https://www.linkedin.com/in/carlosmogollon-it/)
